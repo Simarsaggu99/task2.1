@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/conversionTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <LinearLayout
+        android:id="@+id/unitsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/conversionTypeSpinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sourceUnitSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="to"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/destinationUnitSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/valueEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/unitsLayout"
+        android:layout_marginTop="16dp"
+        android:inputType="numberDecimal"
+        android:hint="Enter value"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/valueEditText"
+        android:layout_marginTop="16dp"
+        android:text="Convert"
+        android:background="@drawable/button_background"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/convertButton"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#b4bdf0"
+        android:text="@string/result_placeholder"
+        android:textColor="@android:color/black"/>
+
+
+
+
+</RelativeLayout>
