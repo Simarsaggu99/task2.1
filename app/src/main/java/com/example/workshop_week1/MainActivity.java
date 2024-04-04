@@ -169,6 +169,4 @@ public class MainActivity extends AppCompatActivity {
 
         return 0; // Default return
     }
-
-    // Implement weightConversion and temperatureConversion methods similarly
 }
